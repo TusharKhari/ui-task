@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 import '../../core/app_colors.dart';
-import '../../core/app_styles.dart'; 
+import '../../core/app_styles.dart';
+
 class DhamakaOffer extends StatelessWidget {
   const DhamakaOffer({
     super.key,
@@ -14,9 +14,8 @@ class DhamakaOffer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin:
-            const EdgeInsetsDirectional.symmetric(horizontal: 16),
-        padding: EdgeInsetsDirectional.only(top: 24, start: 24),
+        margin: const EdgeInsetsDirectional.symmetric(horizontal: 16),
+        padding: const EdgeInsetsDirectional.only(top: 24, start: 24),
         width: double.maxFinite,
         decoration: BoxDecoration(
             color: Colors.white,
@@ -31,35 +30,34 @@ class DhamakaOffer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Double Dhamaka Offer!",
                     style: AppStyles.avenir18800,
                   ),
-                  Text(""),
+                  const Text(""),
                   Text(
                     "Accept payment on Google Pay for Business QR to win weekly cashbacks!",
                     style: AppStyles.avenir14500
-                        .copyWith(color: Color(0xffADADAD)),
+                        .copyWith(color: const Color(0xffADADAD)),
                   ),
                   Text(
-                    "Check Out!",
+                    "Check Out!\n",
                     style: AppStyles.avenir14800
                         .copyWith(color: AppColors.darkPrimary),
-                  ), 
-                  Text(
-                    " ",
-                    style: AppStyles.avenir14800
-                        .copyWith(color: AppColors.darkPrimary),
-                  ), 
+                  ),
                 ],
               ),
             )
-    
             //
             ,
-            Align(
-                alignment: Alignment.bottomRight,
-                child: Image.asset("assets/flag.png")),
+            Positioned(
+              left: size.width*0.45 ,
+              bottom: 0,
+              child: Align(
+              
+                  alignment: Alignment.bottomRight,
+                  child: Image.asset("assets/flag.png")),
+            ),
           ],
         ));
   }
