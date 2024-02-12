@@ -14,15 +14,19 @@ class VerifiedBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsetsDirectional.symmetric(horizontal: 10),
+      margin: const EdgeInsetsDirectional.symmetric(horizontal: 16),
       padding: const EdgeInsetsDirectional.symmetric(horizontal: 10),
       width: double.maxFinite,
       decoration: BoxDecoration(
           color: AppColors.lightPrimary,
-          borderRadius: BorderRadius.circular(5),
+          borderRadius: BorderRadius.circular(10),
           border: Border.all(color: AppColors.darkPrimary, width: 1)),
       child: Column(
         children: [
+          SizedBox(
+            height: 20,
+          ),
+          Image.asset("assets/verified.png"),
           const Text("Become a Verified OstelloAI ",
               style: AppStyles.avenir18800),
           const Text("Institute!", style: AppStyles.avenir18800),
@@ -32,7 +36,7 @@ class VerifiedBadge extends StatelessWidget {
             TextSpan(text: "/year", style: AppStyles.avenir16500),
           ])),
           const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               VerifyWallet(
                 title: "2500",
@@ -44,6 +48,13 @@ class VerifiedBadge extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(
+            height: 10,
+          ),
+          DotTextWidget(size: size),
+          DotTextWidget(size: size),
+          DotTextWidget(size: size),
+          DotTextWidget(size: size),
           DotTextWidget(size: size),
           Container(
             width: double.maxFinite,
@@ -86,7 +97,7 @@ class DotTextWidget extends StatelessWidget {
               color: Colors.black, borderRadius: BorderRadius.circular(10)),
         ),
         SizedBox(
-          width: size.width * 0.80,
+          width: size.width * 0.7,
           child: const Text(
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "),
         ),
@@ -107,7 +118,7 @@ class VerifyWallet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
         decoration: BoxDecoration(
           color: AppColors.middlePrimary,
           borderRadius: BorderRadius.circular(10),
